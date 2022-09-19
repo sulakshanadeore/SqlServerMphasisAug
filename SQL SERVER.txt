@@ -1,0 +1,165 @@
+
+Introduction to MS-SQL Server
+-----------------------------
+
+SQL Server--- database
+RDBMS---Relational database management system.
+
+It is a Microsoft product, versions starting from 2005,2008,2012,2014,2016 etc
+
+Editions:
+Express----- Learning purpose--- 30 days trial pack
+Enterprise----- purchase required
+
+------->Run as an administrator<-------
+Express:
+To work with MS SQL SERVER
+1)SQL Server Management Studio--- allow/help/prompt you to connect to SQL Server
+2)SQL Server------server--- multiple databases
+
+1)SQL Server works with Windows authentication, sql server authentication and mixed authentication.
+Logged into windows OS-----Select Windows Authentication----recommended for learning purpose(use windows userid & password)
+Sql server authentication----(default username: sa/default password: sa)
+you can customize your userid/password
+Mixed Authentication---- windows userid+password & sql server userid + password
+
+
+
+1) Database engine------ SS Database engine----working with multiple databases
+2) Reporting Services---- SSRS
+3) Analysis Services---- SSAS
+4) Integration Services---- SSIS 
+
+****************************************************************************************
+
+Architecture of MS SQL Server
+---------------------------------
+Client -Server
+Whenever u want to connect to the server-----
+Services.msc----(Instance)SQL express/MSSQL server
+
+client Server Architecture:
+server takes request, processes the request & replies to the client with the processed data.
+
+Major 3 components
+1) Protocol engine: Shared Memory,TCP/IP,Named Pipes
+2) Relational engine: CMD Parser,Optimiser,Query Executor
+3) Storage engine:File Types, Buffer Manage,Access Methods, Plan Cache, Transaction Manager and
+Data Parsing: Buffer Cache and Data Storage.
+
+---------------------------------------------------------------------
+When the server & client are same computer/machine-- Shared Memory
+If client and server on different computer/machine on a  different network---- TCPIP
+If client and server on different computer/machine on a  intranet---- Named Pipes
+
+Relational Engine--(Query Processor)-----> What is required for the query, how will it be more  efficient in its execution.
+
+Cmd Parser-- Syntax check
+          --- semantic check
+          --- query tree
+
+restaurant in  bangalore---->french language--->waiter-------> unable to process your request.
+
+
+Storage engine--store the data on the disk  or any devices, retrieve the data when needed.
+
+Data File & Extent
+1 Extent---8 pages
+
+Data File, physically stores the data in the form of pages.
+
+the maintenance done by extents.
+header---96 bytes
+Each page has a header(metadata----page type,page number,used size,free size,pointer to next page)
+
+2 types of files:
+1) Primary:(Extension: MDF) Every database will contain 1 primary file,which stores data related to tables,triggers, different types of objects in the database.
+2) Secondary :(Extension: NDF): Contains user specific data
+3)Log File: (Extension: LDF)---Also called Write ahead logs.
+Used for transaction management.
+
+IF SQL SERVER crashes, u will be able to retrieve from the ldf file
+
+
+Access Manager/Access Methods: Differentiates between the query
+1) Select---- Buffer Manager
+2) Non Select----Transaction Manager
+
+It acts as an interface between the query processor/executor & BufferManager & Transaction Manager.
+Query Received	passed to  Access Methods---- differentiates the job
+
+       BufferManager <-----(Select)   Access Methods (Non Select) ---->     TransactionManager
+	(Select)					                     (Non Select)
+
+
+1) DDL query,selet statement the Buffer Manager elses Transation Manager
+
+Buffer Manager:Plan Cache,Data parsing and dirty page. Provides the data required for processing the query.
+Plan Cache:
+Existing Query Plan: If it has the same query processed earlier, it will show that output and plan
+First Time Cache Plan: If it has the new query, it will create a execution plan and store it in the cache.
+
+
+Transaction Manager: ------ When its non-select
+
+1)Log Manager------- keeps a track of all the updates which are made 
+Log sequence number with transaction id and modification record.
+
+	 OldData 		New Data
+Insert    no                      yes
+Update     yes			yes
+delete	   yes	                 no
+
+Save---commit
+undo----rollback.
+
+Keeps a track of committed and rollbacked data.
+
+
+
+2) Lock Manager:
+while updating a record it will be in lock state---Locking, ie only a single user will be able to 
+update  a record at a particular point of time.
+Lock Manager does the locking.
+This Achieves data consistency and isolation.
+Inconsistent--
+consistent----
+3) Execution Process---- Log manager starts logging and lock manager locks the data.
+the data is in the buffer manager and copy  to be updated in the log manager,in the data buffer.
+When data comes to a page where it is stored, its called a dirty page.
+
+
+Checkpoint--- The process of run and mark all the pages from the dirty pages to the dis, but then
+the page is in the cache.
+Write Ahead Logging---
+Frequency of pushing the data to the disk is every 1 minute, before disk data goes to the buffer log. And so this is called Write Ahead Logging.
+
+Lazy writer----accumulate and has no space to work in the buffer, it is to be pushed to clear the 
+data pages.
+(LRU)Least recently used algorithm for cleaning page from the buffer pool to the disk.
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+********************************************************************************
+
+
+
+Normalization Concepts,
+Installation for Express Edition,
+What is Transact SQL,
+ DDL-Database (Create,Drop),
+DDL-Table (Create,Alter,Drop) + Demos
+
