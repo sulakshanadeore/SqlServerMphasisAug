@@ -1,0 +1,77 @@
+create database MphasisAugustBatch
+
+use MphasisAugustBatch
+
+
+create database secondMphasisAugust
+
+
+create/alter/drop/select----- Txn--log
+
+drop database secondMphasisAugust
+
+create database MphasisTrialAugust
+go
+drop database MphasisTrialAugust
+
+create table Emp
+(
+empno int,
+ename varchar(20),
+joiningdate date,
+deptno int
+)
+
+alter table Emp
+add sal int 
+
+create table student
+(
+rollno int primary key,
+studname varchar(20),
+city varchar(20)
+)
+
+create table Studclass
+(Classno int primary key,
+teachername varchar(20))
+
+alter table student
+add classid int foreign key references studclass(classno)
+
+
+alter table student
+drop column city
+
+
+--This is a comment
+
+--This is also a comment/Ctrl K+C to commnet and Ctrl K +U to uncomment
+
+
+create table Teachers
+(teacherid int primary key,
+teachername varchar(20),
+classid int)
+
+alter table teachers
+add foreign key(classid) references Studclass(classno)
+
+create table subjects
+(subid int primary key,
+subname varchar(20))
+
+
+alter table teachers
+add subjectid  int foreign key references subjects(subid)
+
+
+
+
+
+
+
+
+
+
+
