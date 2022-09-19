@@ -1,0 +1,28 @@
+1) dbcreator---grants rights for creating database.
+2) master must be active, or indirect master is active then only u can create a database.	
+
+
+System Databases:
+1)master---records all the system level info for instance of sql server(SQLExpress)
+2) model------ It is used as the template for all databases created in that instance.
+Modifications made to the model database such as database size, memory, recovery model etc are applied to any databases created afterwards.
+3) msdb----is used by sql server agent for scheduling alerts and jobs.
+4) tempdb----is a workspace for holding temporary objects or results.
+-----------------------------------------------------------------------------------
+Types of Commands
+1) DDL Commands(Data Definition Language)--Create/alter/drop ---database,table,view, any object 
+They are auto committed.
+2) DML Commands(Data Manipulation Language)---- Insert/Update/Delete
+3) DQL(Data Query Lanugage)--Select
+4) DCL----data Control Lanugage---Grant,Revoke,commit,rollback,savepoint
+----------------------------------------------------------------------
+
+Integrity:---- Wholeness and correctness of data.
+                (complete)
+
+Entity Integrity------If u have a primary key u can identify each row uniquely along with its value.
+
+Referential Integrity---- If u have the data defined in some other table which u want to reference 
+in your other table, then to achieve this we use Referential Integrity.
+
+
