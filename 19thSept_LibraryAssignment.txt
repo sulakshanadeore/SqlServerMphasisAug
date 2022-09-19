@@ -1,0 +1,32 @@
+Tables
+
+Member
+-------
+Column Name	Data Type	Description
+Member_Id	Number(5)	Unique Member ID
+Member_Name	Char(25)	 Name of the Library member
+Acc_Open_Date	Date	Date of membership
+Max_Books_Allowed	Number(2)	Total Number of books that can be  issued to the member.
+Penalty_Amount	Number(7,2)	Penalty amount due
+
+	
+
+Book
+----
+Column Name	Data Type	Description
+Book_No	Number(6)	Book identification number
+Book_Name		VarChar(30)	Name of the book
+Author	Char(30)	Author of the book
+Cost	Number(7,2)	Cost of the book
+Category	Char(10)	Category like Science , Fiction etc.
+			
+		
+Issue
+-----
+Column Name	Data Type	Description
+Lib_Issue_Id	Number(10)	Library Book Issue No
+Book_No	Number(6)	Number of the book issued
+Member_Id	Number(5)	Member that issued the book
+Issue_Date	Date	Date of Issue
+Return_date	Date	Return date
+
