@@ -1,0 +1,82 @@
+Concept: 	Select Command
+SQL operators and functions
+Single Row functions: Date, Numeric, Character functions.
+Aggregate functions.
+
+Task / Problems:
+
+1)	List all the members that became the member in the year 2006.
+2)	List all the books that are written by Author Loni and has price  
+		less then 600.
+3)	List the Issue details for the books that are not returned yet.
+4)	Update all the blank return_date with 31-Dec-06 excluding 7005 and 7006.
+5)	List all the Issue details that have books issued for more then 30 days.
+6)	List all the books that have price in range of 500 to 750 and has category as Database.
+7)	List all the books that belong to any one of the following categories Science, Database, Fiction, Management.
+8)	List all the members in the descending order of Penalty due on them.
+9)	List all the books in ascending order of category and descending order of price.
+10)	List all the books that contain word SQL in the name of the book.
+11)	List all the members whose name starts with R or G and contains letter I in it.
+12)	List the entire book name in Init cap and author in upper case in the descending order of the book name.
+13)	Show the data in the following format :
+
+Book No		--------------------------------			NAME
+
+101		is written by  					Denis Ritchie
+102		is written by  					Loni
+
+14)	List the Issue Details for all the books issue by member 101  
+with Issue_date and Return Date in following format. ‘Monday, 
+July, 10, 2006’.
+15)	List the data in the book table with category data displayed as  
+16)	D for Database, S for Science, R for RDBMS and O for all the  
+others.
+17)	Display the book name, Author name with spaces padded with *.
+18)	List the Lib_Issue_Id, Issue_Date, Return_Date and No of days 
+Book was issued.
+19)	Find the details of the member of the Library in the order of their 
+joining the library.
+20)	Display the count of total no of books issued to Member 101.
+21)	Display the total penalty due for all the members.
+22)	Find the total cost of all the books that come under category 
+Database.
+23)	Find the cheapest book price in the library.
+24)	Find the date on which the very first book was issued in the 
+library.
+25)	Find the date on which most recent the book was issued.
+26)	Find the average price of book in Database category.
+
+
+Concept: 	Group by, Having, Use of Aggregate functions.
+Set Operators
+Joins
+
+
+Task / Problems:
+
+1)	List the various categories and count of books in each category.
+2)	List the book_No and the number of times the book is issued in the descending order of count.
+3)	Find the maximum, minimum, total and average penalty amount in the member table.
+4)	Display the member id and the no of books for each member that has issued more then 2 books.
+5)	Display the member id, book no and no of times the same book is issued by the member in the descending order of count.
+6)	Display the month and no of books issued each month in the descending order of count.
+7)	  List the book_no of all the books that are not issued to any  
+member so far. 
+8)	List all the member id that exist in member table and has also at least one book issued by them. 
+9)	List the member ID with highest and lowest no of books issued. 
+10)	List all the Issue_details for books issued in December and July without using any arithmetic, Logical or comparison operator.
+11)	 List the Book_No, Book_Name and Issue_date for all the books that are issued in month of December and belong to category Database.
+12)	 List the Member Id, Member Name and No of books Issued in the descending order of the count.
+13)	List the Book No, Book Name, Issue_date and Return_Date for all the books issued by Richa Sharma.
+14)	List the details of all the members that have issued books in Database category.
+15)	List all the books that have highest price in their own category.
+16)	List all the Issue_Details where Issue_date is not within the Acc_open_date and Return_date for that member.
+17)	List all the members that have not issued a single book so far.
+18)	List all the Members where No of books Issued exceeds the Max No of books allowed.
+19)	List all the members that have issued the same book as issued by Garima.
+20)	List the Book_Name, Price of all the books that are not returned for more then 30 days.
+21)	List all the authors and book_name that has more then 1 book written by them.
+22)	List the Member ID, Member Name of the people that have issued the highest and the lowest no of books.
+23)	List the details of highest 3 priced books.
+24)	List the total cost of all the books that are currently issued but not returned.
+25)	List the details of the book that has been issued maximum no of times
