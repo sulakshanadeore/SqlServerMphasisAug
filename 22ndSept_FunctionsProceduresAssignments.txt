@@ -1,0 +1,28 @@
+1) write a program to concat firstname and last name and print the concatenated String.
+2)Write a batch that will check for the existence of the title “The Gourment Microwave” If it exists, print the cost of the book else display “Not Found”.
+
+3)Write a batch to display the titles of all the Psychology books if the average price of books is more than $15. Display the appropriate output.
+
+4)Write a procedure which accepts the city name as a parameter and displays the names of publishers residing in the city
+
+5) Write a procedure which accepts the title_id as a parameter and displays the number of orders placed for the book.
+
+6)Write a procedure which displays store names and the number of orders placed by the each store.
+
+7)Write a procedure that take a title_id as a parameter and returns the number of orders placed for the book. Define two parameters @in_tid as an ordinary parameter and @tot_orders as a return parameter. 
+
+8)Write a User Defined Function to get the number of working days between two dates.Assume Saturaday and Sunday as holidays.
+
+9)Write a function that can calculate the yearly salary of a job if an applicant is    given the hourly salary. Consider that the yearly salary is based on 40 hours a week. In your function, if the hourly salary is given as a negative value, don't perform the calculation 
+
+10)Write a  function that processes a cylinder. It calculates and displays the diameter of the base, the circumference of the base, the base area, the side area, the total area, and the volume, given the radius and the height of a cylinder 
+
+11)You will create two new tables called NewCategories and NewProducts. Neither have the PRIMARY and FOREIGN KEY constraints of the Categories and Products tables. You will create a trigger on the NewCategories table. This trigger updates the Discontinued column in the NewProducts table whenever a category is deleted (whenever a record is deleted from the NewCategories table). All affected products are marked as 1, indicating that they are discontinued.
+
+13)You will create a DELETE trigger on the NewProducts table. This trigger determines whether an order history exists in the Order Details table before the trigger permits a deletion from the NewProducts table. 
+
+14) Create a trigger on NewProducts table to restrict the deletion of more than 3 records at the same time
+
+
+
+
