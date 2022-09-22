@@ -1,0 +1,33 @@
+Concept: 	Constraints
+Views
+Index
+
+Task / Problems:
+
+1)	Create table Member_C with following constraints.
+a.	Member_Id – Primary Key
+b.	Acc_Open_Date – Default System date.
+c.	Max_Allowed_Books < 100
+d.	Penalty maximum 1000.
+
+2)	Create table Book_C with following constraints.
+a.	Book_No – Primary Key
+b.	Book_Name – Not Null
+c.	Category – Science, Fiction, Database, RDBMS, Others.
+
+3)	Create table Issue_C with following constraints.
+a.	Lib_Issue_Id – Primary Key
+b.	Member_Id – Foreign Key
+c.	Book_No – Foreign key
+d.	Issue_date < Return_date
+
+4)	Add a constraint Price < 2500 to Book table.
+5)	View all the constraints for table Issue_C using view User_Constraints.
+6)	Disable constraint created in step 3-d
+7)	Create a Read Only view to display Lib_Issue_Id, Book_Name, Member_Name, Author and Issue_date for all the books that have price between 500 – 750 and category as Database or RDBMS.
+8)	Create a view with check option to display all the books that has price greater then 500.
+9)	Perform DML operations to the view and evaluate the effect of Check Option.
+10)	Create Index on Book_Name in book table.
+11)	Create Index on Member_Id, Book_No in Issue table.
+12)	State difference between Index vs Unique Index.
+13)	Do we need to create index on Member_Id in Member_C table if not, state the reason for the same.
